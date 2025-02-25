@@ -5,12 +5,16 @@ import "../styles/global.css";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GitHubIcon from "../icons/GitHub.astro";
+import MailIcon from "../icons/Mail.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Portfolio · by Juan Bautista">
+<Layout
+  title="Portfolio de Juan Bautista"
+  description="Desarrollador web Full-Stack y apasionado por la IA. Especializado en crear aplicaciones web únicas."
+>
   <main>
     <section class="w-full mx-auto lg:w-[740px] py-44">
       <img
@@ -28,7 +32,7 @@ import GitHubIcon from "../icons/GitHub.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl opacity-80 text-wrap pb-4">
+      <h2 class="text-2xl opacity-80 text-wrap">
         <span class="text-blue-100/90"
           >Desarrollador web Full-Stack y apasionado por la IA.</span
         ><span> De Burriana, España.</span>
@@ -36,15 +40,19 @@ import GitHubIcon from "../icons/GitHub.astro";
           >Especializado en crear aplicaciones web únicas.</span
         >
       </h2>
-      <nav class="flex gap-x-2">
+      <nav class="flex gap-x-4 mt-10">
         <SocialPill
           href="https://www.linkedin.com/in/juan-bautista-garcia-traver"
         >
-          <LinkedInIcon class="w-6 h-6" />LinkedIn
+          <LinkedInIcon class="size-6" />LinkedIn
         </SocialPill>
 
         <SocialPill href="https://github.com/bautista225">
-          <GitHubIcon class="w-6 h-6" />GitHub
+          <GitHubIcon class="size-6" />GitHub
+        </SocialPill>
+
+        <SocialPill href="https://github.com/bautista225">
+          <MailIcon class="size-6" />juangarciatraver@gmail.com
         </SocialPill>
       </nav>
     </section>
