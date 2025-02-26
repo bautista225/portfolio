@@ -1,1 +1,35 @@
-<footer class="py-20">Crafted with love by Juan Bautista</footer>
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class="bg-white rounded-lg shadow-sm m-4 dark:bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10"
+>
+  <div
+    class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+  >
+    <span
+      class="text-sm text-transparent bg-gradient-to-r from-cyan-600 to-purple-500 bg-clip-text"
+      >© {currentYear}
+      <a href="https://flowbite.com/" class="hover:underline">Juan Bautista</a>
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
+      <li>
+        <a href="#about" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      </li>
+      <li>
+        <a href="#experience" class="hover:underline me-4 md:me-6"
+          >Experiencia</a
+        >
+      </li>
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">Proyectos</a>
+      </li>
+      <li>
+        <a href="mailto:juangarciatraver@gmail.com" class="hover:underline"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>

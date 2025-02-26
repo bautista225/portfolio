@@ -10,6 +10,8 @@ import ExperienceTimeline from "../components/ExperienceTimeline.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCaseIcon from "../icons/BriefCase.astro";
 import Footer from "../components/Footer.astro";
+import CodeIcon from "../icons/Code.astro";
+import Projects from "../components/Projects.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -37,10 +39,12 @@ import Footer from "../components/Footer.astro";
         </a>
       </h1>
       <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[600px]">
-        <span class="text-blue-100/90"
-          >Desarrollador web Full-Stack y apasionado por la IA.</span
-        ><span> De Burriana, España.</span>
-        <span class="text-emerald-100/90"
+        +3 años de experiencia.<span
+          class="text-transparent bg-gradient-to-r from-cyan-600 to-purple-500 bg-clip-text"
+        >
+          Desarrollador web Full-Stack y apasionado por la IA</span
+        ><span> de Burriana, España.</span>
+        <span class="text-emerald-50/90"
           >Especializado en crear aplicaciones web únicas.</span
         >
       </h2>
@@ -48,24 +52,35 @@ import Footer from "../components/Footer.astro";
         <SocialPill
           href="https://www.linkedin.com/in/juan-bautista-garcia-traver"
         >
-          <LinkedInIcon class="size-4 md:size-6" />LinkedIn
+          <LinkedInIcon class="size-4 md:size-5" />LinkedIn
         </SocialPill>
 
         <SocialPill href="https://github.com/bautista225">
-          <GitHubIcon class="size-4 md:size-6" />GitHub
+          <GitHubIcon class="size-4 md:size-5" />GitHub
         </SocialPill>
 
         <SocialPill href="mailto:juangarciatraver@gmail.com">
-          <MailIcon class="size-4 md:size-6" />juangarciatraver@gmail.com
+          <MailIcon class="size-4 md:size-5" />juangarciatraver@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
     <SectionContainer id="experience">
-      <h2 class="text-2xl font-semibold mb-5 flex gap-x-2 items-center">
-        <BriefCaseIcon class="size-6" />Experiencia laboral
+      <h2
+        class="text-xl md:text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+      >
+        <BriefCaseIcon class="size-6 md:size-7" />Experiencia laboral
       </h2>
       <ExperienceTimeline />
     </SectionContainer>
+    <SectionContainer id="projects">
+      <h2
+        class="text-xl md:text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+      >
+        <CodeIcon class="size-6 md:size-7" /> Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
     <Footer />
   </main>
 </Layout>
