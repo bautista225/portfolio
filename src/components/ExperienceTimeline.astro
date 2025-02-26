@@ -1,44 +1,6 @@
 ---
 import ExperienceTimelineItem from "./ExperienceTimelineItem.astro";
-
-const EXPERIENCES = [
-  {
-    period: "Febrero 2019 - Enero 2022",
-    title: "Full Stack Engineer",
-    company: "Irene Solutions SL",
-    description: `· Built an Automated Bank Reconciliation add-on for SAP Business One.
- · Developed a Document Management Workflow with SAP endpoint.
- · Performed a Biometric Signature solution for PDF documents.
- · Maintained an automated document extraction with digitalization endpoint.
- · Deployed Mantis bug tracker.
- · Managed an infrastructure compound of ESXi virtualization systems.`,
-    technologies: ".Net, C#, JavaScript, Bash, SQL, NoSQL, git",
-  },
-  {
-    period: "Febrero 2019 - Enero 2022",
-    title: "Full Stack Engineer",
-    company: "Irene Solutions SL",
-    description: `· Desarrollé un complemento de conciliación bancaria automatizada para SAP Business One.
-· Desarrollé un flujo de trabajo de gestión de documentos con un punto final de SAP.
-· Implementé una solución de firma biométrica para documentos PDF.
-· Mantuve una extracción automatizada de documentos con un punto final de digitalización.
-· Implementé y desplegué Mantis bug tracker en empresa cliente.
-· Gestioné un conjunto de infraestructura de sistemas de virtualización ESXi.`,
-    technologies: ".Net, C#, JavaScript, Bash, SQL, NoSQL, git",
-  },
-  {
-    period: "Febrero 2019 - Enero 2022",
-    title: "Full Stack Engineer",
-    company: "Irene Solutions SL",
-    description: `· Desarrollé un complemento de conciliación bancaria automatizada para SAP Business One.
-· Desarrollé un flujo de trabajo de gestión de documentos con un punto final de SAP.
-· Implementé una solución de firma biométrica para documentos PDF.
-· Mantuve una extracción automatizada de documentos con un punto final de digitalización.
-· Implementé y desplegué Mantis bug tracker en empresa cliente.
-· Gestioné un conjunto de infraestructura de sistemas de virtualización ESXi.`,
-    technologies: ".Net, C#, JavaScript, Bash, SQL, NoSQL, git",
-  },
-];
+import { EXPERIENCES } from "../data/experiences";
 ---
 
 <ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
