@@ -33,11 +33,18 @@ const { title, description } = Astro.props;
 
   html {
     font-family: "Onest variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
