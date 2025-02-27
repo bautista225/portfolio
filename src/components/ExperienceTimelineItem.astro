@@ -1,10 +1,12 @@
 ---
+import type { Technology } from "../data/technologies";
+
 interface Props {
   period: string;
   title: string;
   company: string;
   description: string;
-  technologies: string;
+  technologies: Technology[];
 }
 
 const { period, title, company, description, technologies } = Astro.props;
@@ -18,11 +20,28 @@ const { period, title, company, description, technologies } = Astro.props;
   class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
   >{period}</time
 >
-<h3 class="text-lg font-semibold text-gray-900 dark:text-emerald-100/90 mt-2">
-  {title}
+<h3 class="text-lg font-semibold mt-1 flex gap-x-2 flex-wrap">
+  <span class="text-emerald-50/90">{title}</span><span class="">·</span><span
+    class="text-transparent bg-gradient-to-r from-cyan-600 to-purple-500 bg-clip-text"
+    >{company}</span
+  >
 </h3>
+<ul class="flex flex-row gap-x-2 gap-y-1.5 mt-0.5 mb-3 flex-wrap">
+  {
+    technologies.map((technology) => (
+      <li>
+        <span
+          class={`flex gap-x-2 rounded-full text-xs ${technology.class} py-1 px-2 `}
+        >
+          <technology.icon class="size-4" />
+          {technology.name}
+        </span>
+      </li>
+    ))
+  }
+</ul>
 <p
-  class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty"
+  class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 hover:text-gray-200 transition text-pretty"
 >
   <Fragment set:html={description} />
 </p>

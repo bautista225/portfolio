@@ -1,78 +1,4 @@
-import HtmlIcon from "../icons/Html.astro";
-import BootstrapIcon from "../icons/Bootstrap.astro";
-import JavaScriptIcon from "../icons/JavaScript.astro";
-import CSharpIcon from "../icons/CSharp.astro";
-import ReactIcon from "../icons/React.astro";
-import ReduxIcon from "../icons/Redux.astro";
-import ReactRouterIcon from "../icons/ReactRouter.astro";
-import TypeScriptIcon from "../icons/TypeScript.astro";
-import CohereIcon from "../icons/Cohere.astro";
-import CSSIcon from "../icons/CSS.astro";
-import ViteIcon from "../icons/Vite.astro";
-
-export type Technology = {
-  name: string;
-  class: string;
-  icon: (_props: Record<string, any>) => any;
-};
-
-export const TECHNOLOGIES = {
-  HTML: {
-    name: "HTML",
-    class: "bg-[#20232A] text-white",
-    icon: HtmlIcon,
-  },
-  Bootstrap: {
-    name: "Bootstrap",
-    class: "bg-[#20232A] text-white",
-    icon: BootstrapIcon,
-  },
-  JavaScript: {
-    name: "JavaScript",
-    class: "bg-[#20232A] text-white",
-    icon: JavaScriptIcon,
-  },
-  CSharp: {
-    name: "C#",
-    class: "bg-[#20232A] text-white",
-    icon: CSharpIcon,
-  },
-  React: {
-    name: "React",
-    class: "bg-[#20232A] text-white",
-    icon: ReactIcon,
-  },
-  Redux: {
-    name: "Redux",
-    class: "bg-[#20232A] text-white",
-    icon: ReduxIcon,
-  },
-  ReactRouter: {
-    name: "React Router",
-    class: "bg-[#20232A] text-white",
-    icon: ReactRouterIcon,
-  },
-  TypeScript: {
-    name: "TypeScript",
-    class: "bg-[#20232A] text-white",
-    icon: TypeScriptIcon,
-  },
-  Cohere: {
-    name: "Cohere AI",
-    class: "bg-[#20232A] text-white",
-    icon: CohereIcon,
-  },
-  CSS: {
-    name: "CSS",
-    class: "bg-[#20232A] text-white",
-    icon: CSSIcon,
-  },
-  Vite: {
-    name: "Vite",
-    class: "bg-[#20232A] text-white",
-    icon: ViteIcon,
-  },
-};
+import { TECHNOLOGIES } from "./technologies";
 
 export const PROJECTS = [
   {
@@ -126,9 +52,11 @@ export const PROJECTS = [
     image: "/projects/wefinz-shot.webp",
     technologies: [
       TECHNOLOGIES.HTML,
-      TECHNOLOGIES.Bootstrap,
       TECHNOLOGIES.JavaScript,
+      TECHNOLOGIES.Bootstrap,
       TECHNOLOGIES.CSharp,
+      TECHNOLOGIES.SQL,
+      TECHNOLOGIES.NoSQL,
     ],
   },
 ];

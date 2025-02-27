@@ -2,7 +2,7 @@
 import SocialPill from "./SocialPill.astro";
 import OpenTabIcon from "../icons/OpenTab.astro";
 import GitHubIcon from "../icons/GitHub.astro";
-import { type Technology } from "../data/projects";
+import { type Technology } from "../data/technologies";
 
 interface Props {
   title: string;
@@ -37,7 +37,7 @@ const { title, image, technologies, description, github, link } = Astro.props;
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
+      <ul class="flex flex-row mb-2 gap-x-2 flex-wrap gap-y-1.5">
         {
           technologies.map((technology) => (
             <li>
@@ -52,7 +52,9 @@ const { title, image, technologies, description, github, link } = Astro.props;
         }
       </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400 text-pretty">
+      <div
+        class="mt-2 text-gray-700 dark:text-gray-400 hover:text-gray-200 transition text-pretty"
+      >
         <Fragment set:html={description} />
       </div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
@@ -60,7 +62,7 @@ const { title, image, technologies, description, github, link } = Astro.props;
           github && (
             <SocialPill href={github}>
               <GitHubIcon class="size-6" />
-              Code
+              Código fuente
             </SocialPill>
           )
         }
@@ -68,7 +70,7 @@ const { title, image, technologies, description, github, link } = Astro.props;
           link && (
             <SocialPill href={link}>
               <OpenTabIcon class="size-6" />
-              Preview
+              Probar
             </SocialPill>
           )
         }

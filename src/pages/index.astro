@@ -1,17 +1,13 @@
 ---
-import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import LinkedInIcon from "../icons/LinkedIn.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GitHubIcon from "../icons/GitHub.astro";
-import MailIcon from "../icons/Mail.astro";
 import ExperienceTimeline from "../components/ExperienceTimeline.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCaseIcon from "../icons/BriefCase.astro";
 import Footer from "../components/Footer.astro";
 import CodeIcon from "../icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import Intro from "../components/Intro.astro";
 ---
 
 <Layout
@@ -19,49 +15,8 @@ import Projects from "../components/Projects.astro";
   description="Desarrollador web Full-Stack y apasionado por la IA. Especializado en crear aplicaciones web únicas."
 >
   <main class="px-4">
-    <SectionContainer id="home" class="pt-44 pb-30">
-      <img
-        class="rounded-full size-24 shadow-lg mb-5"
-        alt="Juan Bautista"
-        src="https://avatars.githubusercontent.com/u/25453699?v=4"
-      />
-      <h1
-        class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-8"
-      >
-        Hola, soy Juan Bautista <a
-          href="https://www.linkedin.com/in/juan-bautista-garcia-traver"
-          class="flex justify-center items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[600px]">
-        +3 años de experiencia.<span
-          class="text-transparent bg-gradient-to-r from-cyan-600 to-purple-500 bg-clip-text"
-        >
-          Desarrollador web Full-Stack y apasionado por la IA</span
-        ><span> de Burriana, España.</span>
-        <span class="text-emerald-50/90"
-          >Especializado en crear aplicaciones web únicas.</span
-        >
-      </h2>
-      <nav class="flex gap-4 mt-5 md:mt-10 flex-wrap">
-        <SocialPill
-          href="https://www.linkedin.com/in/juan-bautista-garcia-traver"
-        >
-          <LinkedInIcon class="size-4 md:size-5" />LinkedIn
-        </SocialPill>
-
-        <SocialPill href="https://github.com/bautista225">
-          <GitHubIcon class="size-4 md:size-5" />GitHub
-        </SocialPill>
-
-        <SocialPill href="mailto:juangarciatraver@gmail.com">
-          <MailIcon class="size-4 md:size-5" />juangarciatraver@gmail.com
-        </SocialPill>
-      </nav>
+    <SectionContainer id="home" class="pt-30 md:pt-44 pb-20 md:pb-30">
+      <Intro />
     </SectionContainer>
     <SectionContainer id="experience">
       <h2
