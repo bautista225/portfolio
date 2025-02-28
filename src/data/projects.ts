@@ -4,7 +4,7 @@ export const PROJECTS = [
   {
     title: "Spotify Tools",
     description:
-      "Aplicación web con gestión de estado que permite gestionar listas de reproducción y visualizar estadísticas conectando tu perfil de Spotify.<br/>Ofrece opciones para ordenar playlists por distintos criterios, como fecha de adición o popularidad, así como obtener los artistas y canciones más escuchados para un periodo.",
+      "Aplicación web con gestión de estado que permite parametrizar listas de reproducción y visualizar estadísticas conectando tu perfil de Spotify.<br/>Ofrece opciones para ordenar playlists por distintos criterios, como fecha de adición o popularidad, así como obtener los artistas y canciones más escuchados para un periodo.",
     link: "https://bautista225.github.io/SpotifyTools/",
     github: "https://github.com/bautista225/SpotifyTools",
     image: "/projects/spotify-tools-shot.webp",
