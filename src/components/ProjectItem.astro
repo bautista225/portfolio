@@ -27,7 +27,7 @@ const { title, image, technologies, description, github, link } = Astro.props;
         alt={`Vista previa de ${title}`}
         class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-105 md:group-hover:scale-120"
         loading="lazy"
-        src={image}
+        src={`${import.meta.env.BASE_URL}${image}`}
       />
     </div>
   </div>
