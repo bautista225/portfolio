@@ -1,23 +1,23 @@
 ---
 const navItems = [
   {
+    title: "Inicio",
+    label: "intro",
+    url: "/#intro",
+  },
+  {
     title: "Experiencia",
-    label: "experiencia",
+    label: "experience",
     url: "/#experience",
   },
   {
     title: "Proyectos",
-    label: "proyectos",
+    label: "projects",
     url: "/#projects",
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#about",
-  },
-  {
     title: "Contacto",
-    label: "contacto",
+    label: "contact",
     url: "mailto:miduga@gmail.com",
   },
 ];
@@ -27,7 +27,7 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-5 md:mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full border border-white/10 text-gray-600 dark:text-gray-200 justify-center items-center dark:bg-neutral-900/80 bg-white/50"
+    class="flex px-3 text-sm font-medium rounded-full border border-white/10 text-gray-600 dark:text-gray-200 justify-center items-center dark:bg-neutral-900/30 backdrop-blur-sm bg-white/50"
   >
     {
       navItems.map((link) => (
@@ -44,7 +44,9 @@ const navItems = [
 </header>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    // Highlight the name of section in navbar when the viewport is on that section.
+
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("header nav a");
 
@@ -63,9 +65,7 @@ const navItems = [
     };
 
     const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
+      threshold: 0.5,
     });
 
     sections.forEach((section) => {
