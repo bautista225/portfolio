@@ -5,8 +5,10 @@
 [![Deploy Astro project to GitHub Pages](https://github.com/bautista225/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/bautista225/portfolio/actions/workflows/deploy.yml)
 
 Landing page showcasing modern web design and user experience with sleek layouts, smooth animations, and highlights of my skills and projects.
+
 Build with Astro, Typescript and Tailwind CSS.
 
+## 📖 Screenshots
 ![Portfolio Screenshot](https://github.com/user-attachments/assets/6c86ad41-cbf4-4b54-b8fb-ec2dbe4966ea)
 
 <!--- Revisar para descripciones: https://aayushbharti.in/about --->
