@@ -8,6 +8,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://bautista225.github.io",
-  base: "portfolio",
+  site: "https://juangarciatraver.com",
+  // base: "portfolio",
 });
