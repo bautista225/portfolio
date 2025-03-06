@@ -4,45 +4,51 @@ import LinkedInIcon from "../icons/LinkedIn.astro";
 import MailIcon from "../icons/Mail.astro";
 import Badge from "./Badge.astro";
 import SocialPill from "./SocialPill.astro";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { URLS } from "../data/intro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <img
   class="rounded-full size-32 shadow-lg mb-5 p-1 bg-neutral-700/30 hover:bg-neutral-700/50 transition ring-1 ring-white/20"
-  alt="Juan Bautista"
-  src="https://avatars.githubusercontent.com/u/25453699?v=4"
+  alt={t("intro.personName") as string}
+  src={URLS.personAvatar}
 />
 <h1
   class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-8"
 >
-  Hola, soy Juan Bautista <a
-    href="https://www.linkedin.com/in/juan-bautista-garcia-traver"
+  {t("intro.greeting")}
+  {t("intro.personName")}
+  <a
+    href={URLS.linkedIn}
     class="flex justify-center items-center"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <Badge>Disponible para trabajar</Badge>
+    <Badge>{t("intro.workBadge")}</Badge>
   </a>
 </h1>
 <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[600px]">
-  +3 años de experiencia.<span
+  {t("intro.descriptionYears")}<span
     class="text-transparent bg-gradient-to-r from-cyan-600 to-purple-500 bg-clip-text"
   >
-    Desarrollador web Full-Stack y apasionado por la IA</span
-  ><span> de Burriana, España.</span>
-  <span class="text-emerald-50/90"
-    >Especializado en crear aplicaciones web únicas.</span
-  >
+    {t("intro.descriptionExperience")}</span
+  ><span> {t("intro.descriptionLocation")}</span>
+  <span class="text-emerald-50/90">{t("intro.descriptionAdditional")}</span>
 </h2>
 <nav class="flex gap-4 mt-5 md:mt-10 flex-wrap">
-  <SocialPill href="https://www.linkedin.com/in/juan-bautista-garcia-traver">
+  <SocialPill href={URLS.linkedIn}>
     <LinkedInIcon class="size-4 md:size-5" />LinkedIn
   </SocialPill>
 
-  <SocialPill href="https://github.com/bautista225">
+  <SocialPill href={URLS.gitHub}>
     <GitHubIcon class="size-4 md:size-5" />GitHub
   </SocialPill>
 
-  <SocialPill href="mailto:juangarciatraver@gmail.com">
-    <MailIcon class="size-4 md:size-5" />juangarciatraver@gmail.com
+  <SocialPill href={`mailto:${URLS.email}`}>
+    <MailIcon class="size-4 md:size-5" />{`${URLS.email}`}
   </SocialPill>
 </nav>

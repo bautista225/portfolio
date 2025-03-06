@@ -1,13 +1,8 @@
 ---
-import type { Technology } from "../data/technologies";
+import { TECHNOLOGIES, type Technology } from "../data/technologies";
+import type { Experience } from "../types";
 
-interface Props {
-  period: string;
-  title: string;
-  company: string;
-  description: string;
-  technologies: Technology[];
-}
+interface Props extends Experience {}
 
 const { period, title, company, description, technologies } = Astro.props;
 ---
@@ -26,16 +21,20 @@ const { period, title, company, description, technologies } = Astro.props;
 </h3>
 <ul class="flex flex-row gap-x-2 gap-y-1.5 mt-0.5 mb-3 flex-wrap">
   {
-    technologies.map((technology) => (
-      <li>
-        <span
-          class={`flex gap-x-2 rounded-full text-xs ${technology.class} py-1 px-2 `}
-        >
-          <technology.icon class="size-4" />
-          {technology.name}
-        </span>
-      </li>
-    ))
+    technologies.map((technologyName) => {
+      const technology =
+        TECHNOLOGIES[technologyName as keyof typeof TECHNOLOGIES];
+      return (
+        <li>
+          <span
+            class={`flex gap-x-2 rounded-full text-xs ${technology.class} py-1 px-2 `}
+          >
+            <technology.icon class="size-4" />
+            {technology.name}
+          </span>
+        </li>
+      );
+    })
   }
 </ul>
 <p

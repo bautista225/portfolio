@@ -2,11 +2,16 @@
 import SocialPill from "./SocialPill.astro";
 import OpenTabIcon from "../icons/OpenTab.astro";
 import GitHubIcon from "../icons/GitHub.astro";
-import { type Technology } from "../data/technologies";
+import { TECHNOLOGIES, type Technology } from "../data/technologies";
+import type { StringLiteralType } from "typescript";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
   title: string;
-  technologies: Technology[];
+  technologies: string[];
   description: string;
   github: string;
   link: string;
@@ -39,16 +44,20 @@ const { title, image, technologies, description, github, link } = Astro.props;
     <div class="flex flex-wrap mt-2">
       <ul class="flex flex-row mb-2 gap-x-2 flex-wrap gap-y-1.5">
         {
-          technologies.map((technology) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${technology.class} py-1 px-2 `}
-              >
-                <technology.icon class="size-4" />
-                {technology.name}
-              </span>
-            </li>
-          ))
+          technologies.map((technologyName) => {
+            const technology =
+              TECHNOLOGIES[technologyName as keyof typeof TECHNOLOGIES];
+            return (
+              <li>
+                <span
+                  class={`flex gap-x-2 rounded-full text-xs ${technology.class} py-1 px-2 `}
+                >
+                  <technology.icon class="size-4" />
+                  {technology.name}
+                </span>
+              </li>
+            );
+          })
         }
       </ul>
 
@@ -62,7 +71,7 @@ const { title, image, technologies, description, github, link } = Astro.props;
           github && (
             <SocialPill href={github}>
               <GitHubIcon class="size-6" />
-              Código fuente
+              {t("projects.codeButton")}
             </SocialPill>
           )
         }
@@ -70,7 +79,7 @@ const { title, image, technologies, description, github, link } = Astro.props;
           link && (
             <SocialPill href={link}>
               <OpenTabIcon class="size-6" />
-              Probar
+              {t("projects.previewButton")}
             </SocialPill>
           )
         }

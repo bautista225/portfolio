@@ -1,8 +1,14 @@
 ---
-import { PROJECTS } from "../data/projects";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import ProjectItem from "./ProjectItem.astro";
+import { type Project } from "../types";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const projects = t("projects") as readonly Project[];
 ---
 
 <div class="flex flex-col gap-y-16">
-  {PROJECTS.map((technology) => <ProjectItem {...technology} />)}
+  {projects.map((project) => <ProjectItem {...project} />)}
 </div>

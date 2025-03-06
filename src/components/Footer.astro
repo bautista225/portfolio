@@ -1,6 +1,11 @@
 ---
 import AstroIcon from "../icons/AstroIcon.astro";
 import TailwindIcon from "../icons/Tailwind.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { URLS } from "../data/intro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const currentYear = new Date().getFullYear();
 ---
@@ -15,16 +20,16 @@ const currentYear = new Date().getFullYear();
       class="text-sm text-transparent bg-gradient-to-r from-cyan-600 to-purple-500 bg-clip-text"
       >© {currentYear}
       <a
-        href="https://www.github.com/bautista225/"
+        href={URLS.linkedIn}
         class="hover:underline"
         target="_blank"
-        rel="noopener noreferrer">Juan Bautista</a
+        rel="noopener noreferrer">{t("footer.personName")}</a
       >
     </span>
     <span class="text-sm text-gray-300/40 flex flex-row items-center gap-x-1"
-      >Desarrollado con <AstroIcon class="size-3" /> Astro y <TailwindIcon
-        class="size-3"
-      /> Tailwind</span
+      >{t("footer.portfolioTechnologies1")}
+      <AstroIcon class="size-3" /> Astro {t("footer.portfolioTechnologies2")}
+      <TailwindIcon class="size-3" /> Tailwind</span
     >
   </div>
 </footer>

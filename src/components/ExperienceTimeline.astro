@@ -1,14 +1,23 @@
 ---
 import ExperienceTimelineItem from "./ExperienceTimelineItem.astro";
-import { EXPERIENCES } from "../data/experiences";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import type { Experience } from "../types";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const experiences = t("experiences") as readonly Experience[];
 ---
 
 <ol class="relative border-s border-gray-700 ml-3">
   {
-    EXPERIENCES.map((experience) => (
-      <li class="mb-10 ms-4">
-        <ExperienceTimelineItem {...experience} />
-      </li>
-    ))
+    experiences.map((experience) => {
+      return (
+        <li class="mb-10 ms-4">
+          <ExperienceTimelineItem {...experience} />
+        </li>
+      );
+    })
   }
 </ol>

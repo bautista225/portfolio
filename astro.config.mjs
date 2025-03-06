@@ -10,4 +10,11 @@ export default defineConfig({
   },
   site: "https://juangarciatraver.com",
   // base: "portfolio",
+  i18n: {
+    defaultLocale: "en",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
 });
