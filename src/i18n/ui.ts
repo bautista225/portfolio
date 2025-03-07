@@ -1,3 +1,5 @@
+import BritishFlag from "../icons/BritishFlag.astro";
+import SpanishFlag from "../icons/SpanishFlag.astro";
 import {
   experienceGradiant,
   experienceIreneSolutions,
@@ -12,9 +14,14 @@ import {
   projectWefinz,
 } from "./projects";
 
-export const languages: Record<string, string> = {
-  en: "English",
-  es: "Español",
+export type Language = {
+  name: string;
+  flagIcon: (_props: Record<string, any>) => any;
+};
+
+export const languages: Record<string, Language> = {
+  en: { name: "English", flagIcon: BritishFlag },
+  es: { name: "Español", flagIcon: SpanishFlag },
 };
 
 export const defaultLang = "en";
