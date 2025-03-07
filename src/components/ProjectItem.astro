@@ -2,8 +2,7 @@
 import SocialPill from "./SocialPill.astro";
 import OpenTabIcon from "../icons/OpenTab.astro";
 import GitHubIcon from "../icons/GitHub.astro";
-import { TECHNOLOGIES, type Technology } from "../data/technologies";
-import type { StringLiteralType } from "typescript";
+import { TECHNOLOGIES } from "../data/technologies";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);

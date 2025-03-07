@@ -2,13 +2,7 @@
 import ArrowDownUpIcon from "../icons/ArrowDownUp.astro";
 import SpanishFlagIcon from "../icons/SpanishFlag.astro";
 import BritishFlagIcon from "../icons/BritishFlag.astro";
-
-const THEMES = ["Español", "English"];
-
-const THEME_CODES = {
-  Español: "es",
-  English: "en",
-};
+import { languages } from "../i18n/ui";
 ---
 
 <div class="px-2">
@@ -34,9 +28,9 @@ const THEME_CODES = {
   >
     <ul>
       {
-        THEMES.map((theme) => (
+        Object.keys(languages).map((language) => (
           <li class="languages-menu-option px-2 py-1.5 cursor-default hover:bg-gray-500/50 rounded-sm">
-            <a href={`/${THEME_CODES[theme]}/`}>{theme}</a>
+            <a href={`/${languages[language]}/`}>{language}</a>
           </li>
         ))
       }
@@ -101,7 +95,7 @@ const THEME_CODES = {
     });
 
   document.querySelectorAll(".languages-menu-option").forEach((element) => {
-    element.addEventListener("click", (e) => {
+    element.addEventListener("click", () => {
       updateLanguage();
     });
   });
