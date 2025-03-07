@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import ExperienceTimeline from "../components/ExperienceTimeline.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCaseIcon from "../icons/BriefCase.astro";
+import Footer from "../components/Footer.astro";
+import CodeIcon from "../icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import Intro from "../components/Intro.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout
+  title={t("page.title") as string}
+  description={t("page.description") as string}
+>
+  <main class="px-4">
+    <SectionContainer id="intro" class="pt-30 md:pt-44 pb-20 md:pb-30">
+      <Intro />
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2
+        class="text-xl md:text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+      >
+        <BriefCaseIcon class="size-6 md:size-7" />
+        {t("experiences.title")}
+      </h2>
+      <ExperienceTimeline />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2
+        class="text-xl md:text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+      >
+        <CodeIcon class="size-6 md:size-7" />
+        {t("projects.title")}
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <Footer />
+  </main>
+</Layout>

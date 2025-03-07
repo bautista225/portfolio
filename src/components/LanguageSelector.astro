@@ -28,9 +28,9 @@ import { languages } from "../i18n/ui";
   >
     <ul>
       {
-        Object.keys(languages).map((language) => (
+        Object.keys(languages).map((languageCode) => (
           <li class="languages-menu-option px-2 py-1.5 cursor-default hover:bg-gray-500/50 rounded-sm">
-            <a href={`/${languages[language]}/`}>{language}</a>
+            <a href={`/${languageCode}/`}>{languages[languageCode]}</a>
           </li>
         ))
       }
@@ -61,7 +61,7 @@ import { languages } from "../i18n/ui";
   const languagesMenu = document.getElementById("languages-menu");
 
   const getLanguagePreference = () => {
-    return window.location.pathname.replaceAll("/", "");
+    return document.documentElement.lang;
   };
 
   const updateIcon = (languagePreference) => {
