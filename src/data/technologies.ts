@@ -21,6 +21,9 @@ import ScikitLearnIcon from "../icons/Scikit-learn.astro";
 import OpenCVIcon from "../icons/OpenCV.astro";
 import DockerIcon from "../icons/Docker.astro";
 import JiraIcon from "../icons/Jira.astro";
+import NextjsIcon from "../icons/Nextjs.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+import AemetIcon from "../icons/Aemet.astro";
 
 export type Technology = {
   name: string;
@@ -143,5 +146,20 @@ export const TECHNOLOGIES = {
     name: "Jira",
     class: "bg-[#20232A] text-white",
     icon: JiraIcon,
+  },
+  NextJS: {
+    name: "Next.JS",
+    class: "bg-[#20232A] text-white",
+    icon: NextjsIcon,
+  },
+  Tailwind: {
+    name: "Tailwind CSS",
+    class: "bg-[#20232A] text-white",
+    icon: TailwindIcon,
+  },
+  AEMET: {
+    name: "AEMET",
+    class: "bg-[#20232A] text-white",
+    icon: AemetIcon,
   },
 };

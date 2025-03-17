@@ -9,6 +9,7 @@ import { intro } from "./intro";
 import { navbar } from "./navbar";
 import {
   projectAiTranslator,
+  projectMeteo4Sport,
   projectSpotifyTools,
   projectTicTacToe,
   projectWefinz,
@@ -43,6 +44,7 @@ export const ui = {
     "projects.codeButton": "Source code",
     "projects.previewButton": "Try it",
     projects: [
+      { ...projectMeteo4Sport.en },
       { ...projectSpotifyTools.en },
       { ...projectAiTranslator.en },
       { ...projectTicTacToe.en },
@@ -68,6 +70,7 @@ export const ui = {
     "projects.codeButton": "Código fuente",
     "projects.previewButton": "Probar",
     projects: [
+      { ...projectMeteo4Sport.es },
       { ...projectSpotifyTools.es },
       { ...projectAiTranslator.es },
       { ...projectTicTacToe.es },

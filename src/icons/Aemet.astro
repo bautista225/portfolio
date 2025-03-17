@@ -1,0 +1,10 @@
+---
+import { Image } from "astro:assets";
+import AemetLogo from "../../public/Aemet-logo.webp";
+---
+
+<Image
+  class={Astro.props.class + " min-w-[30px]"}
+  src={AemetLogo}
+  alt="AEMET logo"
+/>
