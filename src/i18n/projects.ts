@@ -5,8 +5,8 @@ export const projectMeteo4Sport = {
       "¿Cansado de mirar el pronóstico del tiempo sin saber qué ponerte para correr? ¡Yo también! Por eso creé esta divertida aplicación web con Next.js y Tailwind.<br/>" +
       "Obtiene datos meteorológicos en tiempo real de AEMET y se conecta con Cohere AI para ofrecerte sugerencias de vestimenta adecuadas, " +
       "además de contarte alguna broma para alegrarte el día.",
-    link: "https://bautista225.github.io/meteo4sport/",
-    github: "https://meteo4sport.vercel.app/",
+    link: "https://meteo4sport.vercel.app/",
+    github: "https://bautista225.github.io/meteo4sport/",
     image: "/projects/meteo4sport-dark-shot.webp",
     technologies: ["NextJS", "TypeScript", "Tailwind", "Cohere", "AEMET"],
   },
@@ -16,8 +16,8 @@ export const projectMeteo4Sport = {
       "Tired of staring at the weather forecast wondering what to wear for your run? Me too! That’s why I built this fun web app using Next.js and Tailwind.<br/>" +
       "It pulls live weather data from AEMET (the Spanish Meteorological Agency) and taps into Cohere AI to give you spot-on outfit suggestions, " +
       "all while cracking a joke to brighten your day.",
-    link: "https://bautista225.github.io/meteo4sport/",
-    github: "https://meteo4sport.vercel.app/",
+    link: "https://meteo4sport.vercel.app/",
+    github: "https://bautista225.github.io/meteo4sport/",
     image: "/projects/meteo4sport-dark-shot.webp",
     technologies: ["NextJS", "TypeScript", "Tailwind", "Cohere", "AEMET"],
   },
