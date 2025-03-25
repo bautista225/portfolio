@@ -9,7 +9,8 @@ Landing page showcasing modern web design and user experience with sleek layouts
 Build with Astro, Typescript and Tailwind CSS.
 
 ## 📖 Screenshots
-![Portfolio Screenshot](https://github.com/user-attachments/assets/6c86ad41-cbf4-4b54-b8fb-ec2dbe4966ea)
+![Portfolio Screenshot](https://github.com/user-attachments/assets/0488e925-9755-4488-9454-2763009b1cb4)
+
 
 <!--- Revisar para descripciones: https://aayushbharti.in/about --->
 
